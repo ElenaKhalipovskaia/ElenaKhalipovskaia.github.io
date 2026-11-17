@@ -2,7 +2,7 @@
 
 Personal portfolio website: https://elenakhalipovskaia.github.io/
 
-A static one-page site built with plain HTML and CSS (no JavaScript, no build tools), hosted on GitHub Pages.
+A static one-page site built with plain HTML and CSS.
 
 ## Files
 
