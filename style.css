@@ -118,10 +118,10 @@ a:focus-visible {
 /* ===== Hero ===== */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 420px; /* 420px — ширина фото */
   gap: 64px;
   align-items: center;
-  padding: 88px 0 96px;
+  padding: 48px 0 56px;
 }
 
 .hero-name {
@@ -148,7 +148,7 @@ a:focus-visible {
 
 /* список контактов: подпись слева, ссылка справа */
 .contacts {
-  margin: 36px 0 32px;
+  margin: 32px 0 28px;
   padding: 0;
   list-style: none;
   max-width: 460px;
@@ -203,7 +203,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 48px;
-  padding: 64px 0;
+  padding: 56px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -376,9 +376,9 @@ a:focus-visible {
    ========================================================= */
 @media (max-width: 860px) {
   .hero {
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: 1fr 300px;
     gap: 40px;
-    padding: 64px 0 72px;
+    padding: 40px 0 48px;
   }
 
   .section {
@@ -421,7 +421,7 @@ a:focus-visible {
 
   .hero-photo {
     order: -1;
-    max-width: 220px;
+    max-width: 280px;
   }
 
   .data-row {
