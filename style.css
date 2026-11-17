@@ -1,150 +1,442 @@
+/* =========================================================
+   Основные настройки: цвета, шрифты, размеры.
+   Чтобы поменять цвет на всём сайте, достаточно изменить
+   значение здесь — оно подставится везде, где используется.
+   ========================================================= */
+:root {
+  --bg: #f8f6f3;          /* фон страницы (тёплый светлый) */
+  --text: #1d1d1f;        /* основной текст */
+  --muted: #5c5955;       /* второстепенный текст */
+  --line: #e3ded7;        /* тонкие разделительные линии */
+  --accent: #9e2b25;      /* акцент: кленовый красный */
+
+  --footer-bg: #1d1d1f;
+  --footer-text: #f8f6f3;
+  --footer-muted: #a8a29c;
+  --footer-accent: #f0a39b;
+
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --header-height: 60px;
+}
+
+/* ===== Общие стили ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* при переходе по меню заголовок раздела не прячется под шапкой */
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ширина контента: не больше 1040px и отступ по краям */
+.container {
+  width: min(1040px, 100% - 48px);
+  margin-inline: auto;
+}
+
+/* ===== Шапка с меню ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(248, 246, 243, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-brand {
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-size: 15px;
 }
-.page {
-  min-height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 20px;
-  background-color: #f6f8fa;
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #24292f;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.nav-links a {
+  color: var(--muted);
 }
-.card {
-  width: 100%;
-  max-width: 900px;
-  background-color: #ffffff;
-  padding: 32px 24px;
-  border: 1px solid #ffffffa6;
-  border-radius: 22px;
-  box-shadow: 0 28px 70px -24px #18181b6b;
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* ===== Hero ===== */
+.hero {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: center;
+  padding: 88px 0 96px;
 }
-.info {
+
+.hero-name {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 5.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.hero-role {
+  margin: 16px 0 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hero-tagline {
+  margin: 4px 0 0;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* список контактов: подпись слева, ссылка справа */
+.contacts {
+  margin: 36px 0 32px;
+  padding: 0;
+  list-style: none;
+  max-width: 460px;
+  border-top: 1px solid var(--line);
+}
+
+.contacts li {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  min-width: 0;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
 }
-.title {
-  margin: 0 0 8px 0;
-  font-size: 32px;
+
+.contacts-label {
+  flex: none;
+  width: 90px;
+  color: var(--muted);
+}
+
+.contacts a {
+  overflow-wrap: anywhere;
+}
+
+/* кнопка «Download CV» */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background-color: var(--text);
+  color: var(--bg);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.button:hover {
+  background-color: var(--accent);
+}
+
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===== Разделы (About, Experience, Skills) =====
+   На широком экране: заголовок слева, содержание справа. */
+.section {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  padding: 64px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.75rem;
   line-height: 1.2;
 }
-.subtitle {
-  color: #57606a;
-  font-size: 16px;
-  line-height: 1.4;
+
+.section-body {
+  min-width: 0;
+  max-width: 720px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* список «название — значение»: используется в About и Skills */
+.data-list {
   margin: 0;
 }
-.block {
-  width: 100%;
+
+.lead + .data-list {
+  margin-top: 40px;
 }
-.block-header {
-  font-size: 22px;
-  line-height: 1.4;
-  margin: 0 0 12px 0;
+
+.data-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
 }
-.list {
-  background-color: #fff;
-  list-style-type: none;
-  border: 1px solid hsla(210, 18%, 87%, 1);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 8px 20px;
+
+.data-row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.data-row dt {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.data-row dd {
   margin: 0;
-  box-sizing: border-box;
+  font-size: 15px;
+  color: var(--muted);
 }
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 20px;
-  padding: 12px 0;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
-  font-size: 14px;
-  line-height: 1.4;
+
+/* ===== Опыт работы ===== */
+.job + .job {
+  margin-top: 56px;
 }
-.row:last-child {
-  border-bottom: none;
+
+.job-header {
+  margin-bottom: 12px;
 }
-.row-title {
+
+.job-title {
   margin: 0;
-  min-width: 110px;
-  color: #57606a;
-  flex: none;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
-.link,
-.link:visited {
-  text-decoration: none;
-  color: #0969da;
-  word-break: break-word;
-}
-.link:hover {
-  text-decoration: underline;
-  transform: rotate(3deg) translate(5px);
-}
-.skills {
-  width: 100%;
-}
-.skills {
-  width: 100%;
-  box-sizing: border-box;
-  min-height: 140px;
-  resize: vertical;
-  padding: 12px 14px;
-  border: 1px solid hsla(210, 18%, 87%, 1);
-  border-radius: 10px;
-  background-color: #fff;
-  color: #24292f;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.textarea:focus {
-  outline: none;
-  border-color: #0969da;
-  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
-}
-.hint {
-  margin: 8px 0 0 0;
+
+.job-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-sans);
   font-size: 12px;
-  color: #57606a;
+  color: var(--muted);
+  vertical-align: middle;
 }
-.photo-column {
+
+.job-meta {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.job-summary {
+  margin: 0 0 12px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.job-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.job-list li + li {
+  margin-top: 6px;
+}
+
+.job-list li::marker {
+  color: var(--accent);
+}
+
+.job-subtitle {
+  margin: 20px 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ===== Подвал: Let's Connect ===== */
+.site-footer {
+  margin-top: 32px;
+  padding: 88px 0 40px;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.footer-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.footer-text {
+  margin: 12px 0 32px;
+  max-width: 520px;
+  font-size: 1.1rem;
+  color: var(--footer-muted);
+}
+
+.footer-links {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1rem;
 }
-.photo {
-  box-shadow: 10px 10px 20px #0000004f;
-  margin-top: 75px ;
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
+
+.footer-links a {
+  color: var(--footer-accent);
 }
-@media (max-width: 720px) {
-  .card {
-    grid-template-columns: 1fr;
+
+.footer-links a:focus-visible {
+  outline-color: var(--footer-accent);
+}
+
+.copyright {
+  margin: 72px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  color: var(--footer-muted);
+}
+
+/* =========================================================
+   Планшеты и узкие окна (до 860px)
+   ========================================================= */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr 220px;
+    gap: 40px;
+    padding: 64px 0 72px;
   }
-  .photo-column {
-    position: static;
-    order: -1;
-    display: flex;
+
+  .section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 56px 0;
+  }
+}
+
+/* =========================================================
+   Телефоны (до 600px)
+   ========================================================= */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .nav {
     justify-content: center;
+  }
+
+  .nav-brand {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  /* фото над текстом */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 0 56px;
+  }
+
+  .hero-photo {
+    order: -1;
+    max-width: 220px;
+  }
+
+  .data-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .site-footer {
+    padding: 64px 0 32px;
+  }
+}
+
+/* для тех, кто отключил анимации в системе */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

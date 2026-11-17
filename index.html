@@ -1,86 +1,317 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./normalize.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
-    <title>Elena Maksimova-Khalipovskaia</title>
+    <title>Elena Maksimova-Khalipovskaia — QA Engineer</title>
+    <meta
+      name="description"
+      content="Elena Maksimova-Khalipovskaia, QA Engineer: web and API testing. Experience, skills and contacts."
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="page">
-      <div class="card">
-        <div class="info">
-          <header>
-            <h1 class="title">Elena Maksimova-Khalipovskaia</h1>
-             <h2 class="title">QA Engineer</h2>
-          </header>
-          <section class="block">
-            <h2 class="block-header">Для связи</h2>
-            <ul class="list">
-              <li class="row">
-                <p class="row-title">Telegram</p>
-                <a class="link" href="http://t.me/ehalipovskaia">@ehalipovskaia</a>
-              </li>
-              <li class="row">
-                <p class="row-title">Mail</p>
-                <a class="link" href="mailto:ehalipovskaja@gmail.com">ehalipovskaja@gmail.com</a>
-              </li>
-              <li class="row">
-                <p class="row-title">LinkedIn</p>
-                <a class="link" href="Ссылка на LinkedIn">www.linkedin.com/in/elena-maksimova-khalipovskaia</a>
-              </li>
-              <li class="row">
-                <p class="row-title">GitHub</p>
-                <a class="link" href="Ссылка на GitHub">https://github.com/ElenaKhalipovskaia</a>
-              </li>
-            </ul>
-          </section>
-          <section class="block">
-            <h2 class="block-header">Опыт и навыки</h2>
-            <div
-              class="skills"
-              aria-label="Опыт и навыки"
-            >
-              <h4>В этом разделе будут описаны опыт и навыки из резюме</h4>
-              <p>Опыт <br>
-                ...<br>
-                 Ключевые навыки и инструменты <br>
+    <!-- Top navigation: links jump to sections on the same page -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a class="nav-brand" href="#top">Elena Maksimova-Khalipovskaia</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-              </p>
-              <ul>
-                <li>Postman</li>
-                <li>Charles</li>
-                <li>...</li>
-              </ul>
+    <main id="top">
+      <!-- ===== Hero / Introduction + Contact ===== -->
+      <section class="hero container" aria-labelledby="hero-name">
+        <div class="hero-text">
+          <h1 class="hero-name" id="hero-name">Elena Maksimova-Khalipovskaia</h1>
+          <p class="hero-role">QA Engineer</p>
+          <p class="hero-tagline">Web &amp; API testing · Open to remote roles</p>
+
+          <ul class="contacts" aria-label="Contacts">
+            <li>
+              <span class="contacts-label">Email</span>
+              <a href="mailto:ehalipovskaja@gmail.com">ehalipovskaja@gmail.com</a>
+            </li>
+            <li>
+              <span class="contacts-label">Telegram</span>
+              <a href="https://t.me/ehalipovskaia" target="_blank" rel="noopener">@ehalipovskaia</a>
+            </li>
+            <li>
+              <span class="contacts-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/elena-maksimova-khalipovskaia" target="_blank" rel="noopener"
+                >elena-maksimova-khalipovskaia</a
+              >
+            </li>
+            <li>
+              <span class="contacts-label">GitHub</span>
+              <a href="https://github.com/ElenaKhalipovskaia" target="_blank" rel="noopener">ElenaKhalipovskaia</a>
+            </li>
+          </ul>
+
+          <a class="button" href="Elena-Maksimova-Khalipovskaia-CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+
+        <!-- To change the photo: replace avatar.jpg with a new file of the same name -->
+        <img
+          class="hero-photo"
+          src="avatar.jpg"
+          alt="Portrait of Elena Maksimova-Khalipovskaia"
+          width="640"
+          height="799"
+        />
+      </section>
+
+      <!-- ===== About Me ===== -->
+      <section class="section container" id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">About me</h2>
+        <div class="section-body">
+          <p class="lead">
+            I started in technical support and grew into QA: testing new web features and API endpoints,
+            writing bug reports developers can act on, and tracing defects to their root cause through logs
+            and databases. I then completed a hands-on QA engineering program and tested a live B2B/B2C
+            platform on a project basis. Now I’m looking for a remote QA role where I can go deeper into
+            backend testing and test automation.
+          </p>
+
+          <dl class="data-list">
+            <div class="data-row">
+              <dt>Education</dt>
+              <dd>
+                Master’s Degree, Personality Psychology — Saint Petersburg State University, 2023<br />
+                Bachelor’s Degree, Psychology — Saint Petersburg State University, 2021
+              </dd>
             </div>
-          </section>
-          <section class="block">
-            <h2 class="block-header">В свободное время</h2>
-            <ul class="list">
-              <li class="row">
-                <p class="row-title">Изучаю языки (английский, японский, корейский)</p>
+            <div class="data-row">
+              <dt>Certificates</dt>
+              <dd>
+                Software Testing: Postman for API Testing, 2026<br />
+                Introduction to SQL, School of Data, 2026
+              </dd>
+            </div>
+            <div class="data-row">
+              <dt>Languages</dt>
+              <dd>English — B2 · Russian — native</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===== Work Experience ===== -->
+      <section class="section container" id="experience" aria-labelledby="experience-title">
+        <h2 class="section-title" id="experience-title">Experience</h2>
+        <div class="section-body">
+          <!-- Job 1 -->
+          <article class="job">
+            <header class="job-header">
+              <h3 class="job-title">QA Engineer <span class="job-tag">Project</span></h3>
+              <p class="job-meta">M-Garant · <time datetime="2026-11">Nov 2026</time></p>
+            </header>
+            <p class="job-summary">
+              B2B/B2C platform for secure transactions in repair and construction (Nuxt/Vue.js, Laravel/PHP).
+            </p>
+            <ul class="job-list">
+              <li>Analyzed requirements and created a prioritized checklist for authentication and B2C user flows.</li>
+              <li>
+                Performed manual functional testing of registration, onboarding, authentication, password
+                recovery, account blocking, access control, rate limits and the customer dashboard; tested APIs
+                using Postman.
               </li>
-              <li class="row">
-                <p class="row-title">Учусь играть в шахматы</p>
+              <li>Documented defects and UX/UI recommendations in Buildin; reviewed other testers’ bug reports.</li>
+            </ul>
+            <h4 class="job-subtitle">Impact</h4>
+            <ul class="job-list">
+              <li>
+                Identified inconsistencies in onboarding flows across subscription plans; received positive
+                feedback from the team lead.
               </li>
-              <li class="row">
-                <p class="row-title">Играю в волейбол</p>
+              <li>
+                Found issues with user session handling and rate-limit configuration that did not match
+                documented requirements.
               </li>
             </ul>
-          </section>
+          </article>
+
+          <!-- Job 2 -->
+          <article class="job">
+            <header class="job-header">
+              <h3 class="job-title">Support Engineer – QA</h3>
+              <p class="job-meta">
+                Revvy · Kazan, Russia · <time datetime="2024-07">Jul 2024</time> –
+                <time datetime="2026-06">Jun 2026</time>
+              </p>
+            </header>
+            <ul class="job-list">
+              <li>
+                Performed manual functional testing of new web application features and functional and
+                integration testing of new API endpoints for the admin panel.
+              </li>
+              <li>Handled complex technical incidents and non-standard cases escalated from L1 support.</li>
+              <li>
+                Investigated, analyzed and reproduced defects; prepared detailed bug reports for the development
+                team.
+              </li>
+              <li>
+                Executed and debugged REST API requests in Postman; analyzed JSON responses, status codes and
+                request logic.
+              </li>
+              <li>Configured and maintained third-party integrations with business platforms.</li>
+              <li>Created and tracked tasks in Jira; maintained the knowledge base and internal documentation.</li>
+              <li>
+                Trained and mentored L1 support staff; collaborated with development, product and
+                cross-functional teams.
+              </li>
+            </ul>
+            <h4 class="job-subtitle">Impact</h4>
+            <ul class="job-list">
+              <li>
+                Promoted from L1 to L2 Support-QA within 12 months due to strong product knowledge and technical
+                problem-solving skills.
+              </li>
+              <li>
+                Identified recurring system issues and bottlenecks, contributing to a reduction in repeated
+                support requests.
+              </li>
+              <li>Contributed to improving the workflow between support and development.</li>
+            </ul>
+          </article>
+
+          <!-- Job 3 -->
+          <article class="job">
+            <header class="job-header">
+              <h3 class="job-title">QA Engineer <span class="job-tag">Training program</span></h3>
+              <p class="job-meta">
+                QA Studio · <time datetime="2026-05">May 2026</time> – <time datetime="2026-10">Oct 2026</time>
+              </p>
+            </header>
+            <p class="job-summary">
+              Hands-on QA Engineer program covering web, API, databases, microservices, load and mobile testing.
+            </p>
+            <ul class="job-list">
+              <li>
+                <strong>Web &amp; HTTP:</strong> analyzed network requests in browser DevTools; intercepted and
+                modified traffic in Charles (Breakpoints, Map Local, Map Remote).
+              </li>
+              <li>
+                <strong>Test documentation &amp; design:</strong> analyzed requirements; wrote checklists (Miro)
+                and test cases (Test IT); applied equivalence partitioning, boundary value analysis, decision
+                tables, state transition diagrams and Pairwise; filed bug reports in Jira and Yandex Tracker.
+              </li>
+              <li>
+                <strong>API testing:</strong> tested REST APIs in Postman (collections, variables, environments)
+                and SOAP in SoapUI (WSDL); validated JSON/XML structures; built mocks in Postman and WireMock.
+              </li>
+              <li>
+                <strong>Databases:</strong> wrote SQL queries (JOIN, aggregate functions, subqueries) in
+                PostgreSQL and MySQL; verified data in MongoDB and Redis.
+              </li>
+              <li>
+                <strong>Microservices &amp; monitoring:</strong> tested service interaction via Apache Kafka
+                (Kafka UI); analyzed logs in Kibana, metrics in Grafana, errors in Sentry and traces in Jaeger to
+                locate defects.
+              </li>
+              <li>
+                <strong>Load testing:</strong> built HTTP scenarios in Apache JMeter (JSON Extractor), ran tests
+                with set RPS and duration, analyzed metrics.
+              </li>
+              <li>
+                <strong>Mobile:</strong> tested in Android Studio emulator, analyzed Logcat, tested push
+                notifications and deeplinks, practiced with Firebase (Analytics, Crashlytics).
+              </li>
+              <li>
+                <strong>CI/CD &amp; tools:</strong> deployed a branch to a test environment via GitLab CI/CD;
+                used basic Linux commands; built a personal portfolio site (HTML/CSS) hosted on GitHub.
+              </li>
+            </ul>
+            <h4 class="job-subtitle">Impact</h4>
+            <ul class="job-list">
+              <li>
+                Completed a full testing cycle on a microservices-based project: manual, API, integration, load
+                and mobile testing.
+              </li>
+              <li>Located defects across the entire chain, from UI and API to the database, logs and traces.</li>
+              <li>
+                Mastered 20+ testing and development tools during intensive training, from Charles and JMeter to
+                MongoDB and GitLab CI/CD, and applied them in practice.
+              </li>
+            </ul>
+          </article>
         </div>
-        <div class="photo-column">
-          <img
-            src="./avatar.png"
-            alt="Фотография: Максимова-Халиповская Елена"
-            class="photo"
-            width="320"
-            height="378"
-          />
+      </section>
+
+      <!-- ===== Skills ===== -->
+      <section class="section container" id="skills" aria-labelledby="skills-title">
+        <h2 class="section-title" id="skills-title">Skills</h2>
+        <div class="section-body">
+          <dl class="data-list">
+            <div class="data-row">
+              <dt>Testing</dt>
+              <dd>
+                Functional, regression and integration testing; test cases, checklists, bug reports; load
+                testing (Apache JMeter)
+              </dd>
+            </div>
+            <div class="data-row">
+              <dt>API</dt>
+              <dd>
+                REST, SOAP, Postman, Swagger, Insomnia, SoapUI, Charles, WireMock, Browser DevTools, JSON, XML,
+                HTTP/HTTPS
+              </dd>
+            </div>
+            <div class="data-row">
+              <dt>Automation</dt>
+              <dd>Cypress, JavaScript (basic)</dd>
+            </div>
+            <div class="data-row">
+              <dt>Databases</dt>
+              <dd>SQL, PostgreSQL, MySQL, DBeaver, MongoDB, Redis, Metabase</dd>
+            </div>
+            <div class="data-row">
+              <dt>Monitoring &amp; logs</dt>
+              <dd>Kibana, Grafana, Sentry, Jaeger</dd>
+            </div>
+            <div class="data-row">
+              <dt>Messaging</dt>
+              <dd>Apache Kafka</dd>
+            </div>
+            <div class="data-row">
+              <dt>Mobile testing</dt>
+              <dd>Android Studio, Logcat, Firebase</dd>
+            </div>
+            <div class="data-row">
+              <dt>Tools</dt>
+              <dd>
+                Jira, Yandex Tracker, Test IT (TMS), Confluence, Figma, Git, GitHub, GitLab, CI/CD, Linux,
+                HTML/CSS
+              </dd>
+            </div>
+          </dl>
         </div>
-      </div>
+      </section>
     </main>
+
+    <!-- ===== Let's Connect / Footer ===== -->
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <h2 class="footer-title">Let’s connect</h2>
+        <p class="footer-text">I’m always open to new opportunities and professional connections.</p>
+        <ul class="footer-links">
+          <li><a href="mailto:ehalipovskaja@gmail.com">Email</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/elena-maksimova-khalipovskaia" target="_blank" rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="https://github.com/ElenaKhalipovskaia" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="Elena-Maksimova-Khalipovskaia-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+        </ul>
+        <p class="copyright">© 2026 Elena Maksimova-Khalipovskaia · QA Engineer</p>
+      </div>
+    </footer>
   </body>
 </html>
